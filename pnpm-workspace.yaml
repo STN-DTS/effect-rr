@@ -1,0 +1,12 @@
+minimumReleaseAgeExclude:
+  - '@oxlint-tsgolint/darwin-arm64@7.0.2003'
+  - '@oxlint-tsgolint/darwin-x64@7.0.2003'
+  - '@oxlint-tsgolint/linux-arm64@7.0.2003'
+  - '@oxlint-tsgolint/linux-x64@7.0.2003'
+  - '@oxlint-tsgolint/win32-arm64@7.0.2003'
+  - '@oxlint-tsgolint/win32-x64@7.0.2003'
+  - '@vitest/mocker@5.0.2'
+  - '@vitest/spy@5.0.2'
+  - oxlint-tsgolint@7.0.2003
+  - vite@8.3.1
+  - vitest@5.0.2

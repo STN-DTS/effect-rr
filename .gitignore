@@ -1,0 +1,10 @@
+node_modules/
+build/
+.react-router/
+test-results/
+playwright-report/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example

@@ -1,0 +1,46 @@
+{
+  "name": "effect-rr-pokedex",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development node --conditions development server.ts",
+    "build": "react-router build && tsc -p tsconfig.server.json",
+    "start": "NODE_ENV=production node build/server.js",
+    "dataset:fetch": "node scripts/fetch-pokemon-dataset.ts",
+    "typecheck": "react-router typegen && tsc -p tsconfig.json",
+    "lint": "oxlint --type-aware --deny-warnings && node scripts/check-boundaries.ts",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && pnpm test && pnpm test:e2e"
+  },
+  "dependencies": {
+    "@react-router/node": "8.4.0",
+    "effect": "4.0.0-rc.117",
+    "isbot": "5.2.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-router": "8.4.0",
+    "sirv": "3.0.2"
+  },
+  "devDependencies": {
+    "@effect/vitest": "4.0.0-rc.117",
+    "@playwright/test": "1.63.0",
+    "@react-router/dev": "8.4.0",
+    "@types/node": "24.13.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "oxfmt": "0.70.0",
+    "oxlint": "1.85.0",
+    "oxlint-tsgolint": "7.0.2003",
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "vitest": "5.0.2"
+  },
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "packageManager": "pnpm@12.1.0"
+}
