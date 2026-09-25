@@ -1,0 +1,9 @@
+# Grafana dashboard provider for the Pokédex dashboards (mounted by otel-lgtm.pod.yaml).
+apiVersion: 1
+providers:
+  - name: pokedex
+    folder: Pokédex
+    type: file
+    allowUiUpdates: true
+    options:
+      path: /otel-lgtm/pokedex-dashboards

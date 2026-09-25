@@ -1,0 +1,225 @@
+{
+  "source": "test fixture (subset of data/pokemon.json)",
+  "generatedAt": "2026-09-25T11:18:16.791Z",
+  "pokemon": [
+    {
+      "name": "bulbasaur",
+      "dexNumber": 1,
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "height": 7,
+      "weight": 69,
+      "baseStats": [
+        {
+          "stat": "hp",
+          "value": 45
+        },
+        {
+          "stat": "attack",
+          "value": 49
+        },
+        {
+          "stat": "defense",
+          "value": 49
+        },
+        {
+          "stat": "special-attack",
+          "value": 65
+        },
+        {
+          "stat": "special-defense",
+          "value": 65
+        },
+        {
+          "stat": "speed",
+          "value": 45
+        }
+      ],
+      "artworkUrl": "http://127.0.0.1:4010/sprites/sprites/pokemon/other/official-artwork/1.png"
+    },
+    {
+      "name": "charizard",
+      "dexNumber": 6,
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "height": 17,
+      "weight": 905,
+      "baseStats": [
+        {
+          "stat": "hp",
+          "value": 78
+        },
+        {
+          "stat": "attack",
+          "value": 84
+        },
+        {
+          "stat": "defense",
+          "value": 78
+        },
+        {
+          "stat": "special-attack",
+          "value": 109
+        },
+        {
+          "stat": "special-defense",
+          "value": 85
+        },
+        {
+          "stat": "speed",
+          "value": 100
+        }
+      ],
+      "artworkUrl": "http://127.0.0.1:4010/sprites/sprites/pokemon/other/official-artwork/6.png"
+    },
+    {
+      "name": "pikachu",
+      "dexNumber": 25,
+      "types": [
+        "electric"
+      ],
+      "height": 4,
+      "weight": 60,
+      "baseStats": [
+        {
+          "stat": "hp",
+          "value": 35
+        },
+        {
+          "stat": "attack",
+          "value": 55
+        },
+        {
+          "stat": "defense",
+          "value": 40
+        },
+        {
+          "stat": "special-attack",
+          "value": 50
+        },
+        {
+          "stat": "special-defense",
+          "value": 50
+        },
+        {
+          "stat": "speed",
+          "value": 90
+        }
+      ],
+      "artworkUrl": "http://127.0.0.1:4010/sprites/sprites/pokemon/other/official-artwork/25.png"
+    },
+    {
+      "name": "mr-mime",
+      "dexNumber": 122,
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "height": 13,
+      "weight": 545,
+      "baseStats": [
+        {
+          "stat": "hp",
+          "value": 40
+        },
+        {
+          "stat": "attack",
+          "value": 45
+        },
+        {
+          "stat": "defense",
+          "value": 65
+        },
+        {
+          "stat": "special-attack",
+          "value": 100
+        },
+        {
+          "stat": "special-defense",
+          "value": 120
+        },
+        {
+          "stat": "speed",
+          "value": 90
+        }
+      ],
+      "artworkUrl": "http://127.0.0.1:4010/sprites/sprites/pokemon/other/official-artwork/122.png"
+    },
+    {
+      "name": "deoxys-normal",
+      "dexNumber": 386,
+      "types": [
+        "psychic"
+      ],
+      "height": 17,
+      "weight": 608,
+      "baseStats": [
+        {
+          "stat": "hp",
+          "value": 50
+        },
+        {
+          "stat": "attack",
+          "value": 150
+        },
+        {
+          "stat": "defense",
+          "value": 50
+        },
+        {
+          "stat": "special-attack",
+          "value": 150
+        },
+        {
+          "stat": "special-defense",
+          "value": 50
+        },
+        {
+          "stat": "speed",
+          "value": 150
+        }
+      ],
+      "artworkUrl": "http://127.0.0.1:4010/sprites/sprites/pokemon/other/official-artwork/386.png"
+    },
+    {
+      "name": "deoxys-attack",
+      "dexNumber": 386,
+      "types": [
+        "psychic"
+      ],
+      "height": 17,
+      "weight": 608,
+      "baseStats": [
+        {
+          "stat": "hp",
+          "value": 50
+        },
+        {
+          "stat": "attack",
+          "value": 180
+        },
+        {
+          "stat": "defense",
+          "value": 20
+        },
+        {
+          "stat": "special-attack",
+          "value": 180
+        },
+        {
+          "stat": "special-defense",
+          "value": 20
+        },
+        {
+          "stat": "speed",
+          "value": 150
+        }
+      ],
+      "artworkUrl": "http://127.0.0.1:4010/sprites/sprites/pokemon/other/official-artwork/10001.png"
+    }
+  ]
+}
