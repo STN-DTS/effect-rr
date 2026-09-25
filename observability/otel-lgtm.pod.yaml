@@ -1,0 +1,50 @@
+# Local OpenTelemetry backend for development: an OTLP collector plus Grafana,
+# Loki (logs), Tempo (traces) and Prometheus/Mimir (metrics) in one container.
+#
+# Run from the repository root (the dashboard mounts below are relative to it):
+#
+#   podman kube play observability/otel-lgtm.pod.yaml           # start
+#   podman kube play --down observability/otel-lgtm.pod.yaml    # stop and remove
+#
+# The app's defaults already point at it (OTLP/HTTP on localhost:4318).
+# Grafana: http://localhost:3001 (anonymous admin; the app itself uses 3000).
+#
+# The "Pokédex" folder holds the provisioned dashboard (observability/grafana/).
+# It is re-read every few seconds, so edits to the JSON show up without a restart.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: otel-lgtm
+spec:
+  containers:
+    - name: otel-lgtm
+      image: docker.io/grafana/otel-lgtm
+      ports:
+        - name: grafana
+          containerPort: 3000
+          hostPort: 3001
+        - name: otlp-grpc
+          containerPort: 4317
+          hostPort: 4317
+        - name: otlp-http
+          containerPort: 4318
+          hostPort: 4318
+      volumeMounts:
+        - name: dashboard-provider
+          mountPath: /otel-lgtm/grafana/conf/provisioning/dashboards/pokedex.yaml
+          readOnly: true
+        - name: dashboards
+          mountPath: /otel-lgtm/pokedex-dashboards
+          readOnly: true
+  volumes:
+    # *OrCreate types make podman relabel the files for SELinux (Fedora, RHEL).
+    # Plain File/Directory hostPaths are not relabelled and Grafana can't read them.
+    - name: dashboard-provider
+      hostPath:
+        path: ./observability/grafana/dashboards.yaml
+        type: FileOrCreate
+    - name: dashboards
+      hostPath:
+        path: ./observability/grafana/dashboards
+        type: DirectoryOrCreate
